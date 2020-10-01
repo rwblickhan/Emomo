@@ -5,23 +5,23 @@
 //  Created by Russell Blickhan on 9/29/20.
 //
 
-import SwiftUI
 import CoreData
+import SwiftUI
 
 struct WorkoutsView: View {
     @Environment(\.managedObjectContext) private var viewContext
-    
+
     @FetchRequest(sortDescriptors: [], animation: .default)
     private var workouts: FetchedResults<Workout>
-    
+
     var body: some View {
         NavigationView {
             workoutList
-            .navigationBarTitle(NSLocalizedString("Workouts", comment: "Title of the workouts view"))
-            .navigationBarItems(trailing: EditButton())
+                .navigationBarTitle(NSLocalizedString("Workouts", comment: "Title of the workouts view"))
+                .navigationBarItems(trailing: EditButton())
         }
     }
-    
+
     private var workoutList: some View {
         List {
             ForEach(workouts) { workout in
@@ -34,13 +34,13 @@ struct WorkoutsView: View {
         }
         .listStyle(InsetListStyle())
     }
-    
+
     private var addWorkoutButton: some View {
         DisclosurelessNavigationLink(destination: AddWorkoutView()) {
             AddWorkoutCellView()
         }
     }
-    
+
     private func deleteItems(offsets: IndexSet) {
         withAnimation {
             offsets.map { workouts[$0] }.forEach(viewContext.delete)
