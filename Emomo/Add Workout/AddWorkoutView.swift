@@ -19,7 +19,7 @@ struct AddWorkoutView: View {
         VStack {
             titleTextField.padding()
             List {
-                ForEach(exercises.indices, id:\.self) {
+                ForEach(exercises.indices, id: \.self) {
                     AddExerciseView(data: $exercises[$0])
                 }
                 // TODO this goes crashy crashy :(
