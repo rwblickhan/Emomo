@@ -1,0 +1,658 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CD194FE32525655900363E08 /* WorkoutDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD194FE22525655900363E08 /* WorkoutDetailView.swift */; };
+		CD194FEC2525982E00363E08 /* AddExerciseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD194FEB2525982D00363E08 /* AddExerciseView.swift */; };
+		CD4FD02E2524469F001B3952 /* DisclosurelessNavigationLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4FD02D2524469F001B3952 /* DisclosurelessNavigationLink.swift */; };
+		CD4FD036252446D9001B3952 /* AddWorkoutCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4FD035252446D9001B3952 /* AddWorkoutCellView.swift */; };
+		CD4FD03B252446F1001B3952 /* AddWorkoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4FD03A252446F1001B3952 /* AddWorkoutView.swift */; };
+		CDFC32552524406B00F780F1 /* EmomoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDFC32542524406B00F780F1 /* EmomoApp.swift */; };
+		CDFC32592524406D00F780F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CDFC32582524406D00F780F1 /* Assets.xcassets */; };
+		CDFC325C2524406D00F780F1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CDFC325B2524406D00F780F1 /* Preview Assets.xcassets */; };
+		CDFC325E2524406D00F780F1 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDFC325D2524406D00F780F1 /* Persistence.swift */; };
+		CDFC32612524406D00F780F1 /* Emomo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CDFC325F2524406D00F780F1 /* Emomo.xcdatamodeld */; };
+		CDFC326C2524406D00F780F1 /* EmomoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDFC326B2524406D00F780F1 /* EmomoTests.swift */; };
+		CDFC32772524406E00F780F1 /* EmomoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDFC32762524406E00F780F1 /* EmomoUITests.swift */; };
+		CDFC328C2524418600F780F1 /* WorkoutsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDFC328B2524418600F780F1 /* WorkoutsView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CDFC32682524406D00F780F1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CDFC32492524406B00F780F1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CDFC32502524406B00F780F1;
+			remoteInfo = Emomo;
+		};
+		CDFC32732524406E00F780F1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CDFC32492524406B00F780F1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CDFC32502524406B00F780F1;
+			remoteInfo = Emomo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CD194FE22525655900363E08 /* WorkoutDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutDetailView.swift; sourceTree = "<group>"; };
+		CD194FEB2525982D00363E08 /* AddExerciseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddExerciseView.swift; sourceTree = "<group>"; };
+		CD4FD02D2524469F001B3952 /* DisclosurelessNavigationLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisclosurelessNavigationLink.swift; sourceTree = "<group>"; };
+		CD4FD035252446D9001B3952 /* AddWorkoutCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWorkoutCellView.swift; sourceTree = "<group>"; };
+		CD4FD03A252446F1001B3952 /* AddWorkoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWorkoutView.swift; sourceTree = "<group>"; };
+		CDFC32512524406B00F780F1 /* Emomo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Emomo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CDFC32542524406B00F780F1 /* EmomoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmomoApp.swift; sourceTree = "<group>"; };
+		CDFC32582524406D00F780F1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CDFC325B2524406D00F780F1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		CDFC325D2524406D00F780F1 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		CDFC32602524406D00F780F1 /* Emomo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Emomo.xcdatamodel; sourceTree = "<group>"; };
+		CDFC32622524406D00F780F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CDFC32672524406D00F780F1 /* EmomoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EmomoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CDFC326B2524406D00F780F1 /* EmomoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmomoTests.swift; sourceTree = "<group>"; };
+		CDFC326D2524406D00F780F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CDFC32722524406E00F780F1 /* EmomoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EmomoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CDFC32762524406E00F780F1 /* EmomoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmomoUITests.swift; sourceTree = "<group>"; };
+		CDFC32782524406E00F780F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CDFC328B2524418600F780F1 /* WorkoutsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutsView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CDFC324E2524406B00F780F1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CDFC32642524406D00F780F1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CDFC326F2524406E00F780F1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CD194FE12525654A00363E08 /* Workout Detail */ = {
+			isa = PBXGroup;
+			children = (
+				CD194FE22525655900363E08 /* WorkoutDetailView.swift */,
+			);
+			path = "Workout Detail";
+			sourceTree = "<group>";
+		};
+		CD194FEA2525981D00363E08 /* Add Workout */ = {
+			isa = PBXGroup;
+			children = (
+				CD4FD03A252446F1001B3952 /* AddWorkoutView.swift */,
+				CD194FEB2525982D00363E08 /* AddExerciseView.swift */,
+			);
+			path = "Add Workout";
+			sourceTree = "<group>";
+		};
+		CD4FD02C25244690001B3952 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				CD4FD02D2524469F001B3952 /* DisclosurelessNavigationLink.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		CDFC32482524406B00F780F1 = {
+			isa = PBXGroup;
+			children = (
+				CDFC32532524406B00F780F1 /* Emomo */,
+				CDFC326A2524406D00F780F1 /* EmomoTests */,
+				CDFC32752524406E00F780F1 /* EmomoUITests */,
+				CDFC32522524406B00F780F1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CDFC32522524406B00F780F1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CDFC32512524406B00F780F1 /* Emomo.app */,
+				CDFC32672524406D00F780F1 /* EmomoTests.xctest */,
+				CDFC32722524406E00F780F1 /* EmomoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CDFC32532524406B00F780F1 /* Emomo */ = {
+			isa = PBXGroup;
+			children = (
+				CD4FD02C25244690001B3952 /* Components */,
+				CD194FEA2525981D00363E08 /* Add Workout */,
+				CD194FE12525654A00363E08 /* Workout Detail */,
+				CDFC328A2524417B00F780F1 /* Workouts */,
+				CDFC32542524406B00F780F1 /* EmomoApp.swift */,
+				CDFC325D2524406D00F780F1 /* Persistence.swift */,
+				CDFC32622524406D00F780F1 /* Info.plist */,
+				CDFC325F2524406D00F780F1 /* Emomo.xcdatamodeld */,
+				CDFC32582524406D00F780F1 /* Assets.xcassets */,
+				CDFC325A2524406D00F780F1 /* Preview Content */,
+			);
+			path = Emomo;
+			sourceTree = "<group>";
+		};
+		CDFC325A2524406D00F780F1 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				CDFC325B2524406D00F780F1 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		CDFC326A2524406D00F780F1 /* EmomoTests */ = {
+			isa = PBXGroup;
+			children = (
+				CDFC326B2524406D00F780F1 /* EmomoTests.swift */,
+				CDFC326D2524406D00F780F1 /* Info.plist */,
+			);
+			path = EmomoTests;
+			sourceTree = "<group>";
+		};
+		CDFC32752524406E00F780F1 /* EmomoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				CDFC32762524406E00F780F1 /* EmomoUITests.swift */,
+				CDFC32782524406E00F780F1 /* Info.plist */,
+			);
+			path = EmomoUITests;
+			sourceTree = "<group>";
+		};
+		CDFC328A2524417B00F780F1 /* Workouts */ = {
+			isa = PBXGroup;
+			children = (
+				CDFC328B2524418600F780F1 /* WorkoutsView.swift */,
+				CD4FD035252446D9001B3952 /* AddWorkoutCellView.swift */,
+			);
+			path = Workouts;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CDFC32502524406B00F780F1 /* Emomo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CDFC327B2524406E00F780F1 /* Build configuration list for PBXNativeTarget "Emomo" */;
+			buildPhases = (
+				CDFC324D2524406B00F780F1 /* Sources */,
+				CDFC324E2524406B00F780F1 /* Frameworks */,
+				CDFC324F2524406B00F780F1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Emomo;
+			productName = Emomo;
+			productReference = CDFC32512524406B00F780F1 /* Emomo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CDFC32662524406D00F780F1 /* EmomoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CDFC327E2524406E00F780F1 /* Build configuration list for PBXNativeTarget "EmomoTests" */;
+			buildPhases = (
+				CDFC32632524406D00F780F1 /* Sources */,
+				CDFC32642524406D00F780F1 /* Frameworks */,
+				CDFC32652524406D00F780F1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CDFC32692524406D00F780F1 /* PBXTargetDependency */,
+			);
+			name = EmomoTests;
+			productName = EmomoTests;
+			productReference = CDFC32672524406D00F780F1 /* EmomoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		CDFC32712524406E00F780F1 /* EmomoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CDFC32812524406E00F780F1 /* Build configuration list for PBXNativeTarget "EmomoUITests" */;
+			buildPhases = (
+				CDFC326E2524406E00F780F1 /* Sources */,
+				CDFC326F2524406E00F780F1 /* Frameworks */,
+				CDFC32702524406E00F780F1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CDFC32742524406E00F780F1 /* PBXTargetDependency */,
+			);
+			name = EmomoUITests;
+			productName = EmomoUITests;
+			productReference = CDFC32722524406E00F780F1 /* EmomoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CDFC32492524406B00F780F1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1200;
+				LastUpgradeCheck = 1200;
+				TargetAttributes = {
+					CDFC32502524406B00F780F1 = {
+						CreatedOnToolsVersion = 12.0.1;
+					};
+					CDFC32662524406D00F780F1 = {
+						CreatedOnToolsVersion = 12.0.1;
+						TestTargetID = CDFC32502524406B00F780F1;
+					};
+					CDFC32712524406E00F780F1 = {
+						CreatedOnToolsVersion = 12.0.1;
+						TestTargetID = CDFC32502524406B00F780F1;
+					};
+				};
+			};
+			buildConfigurationList = CDFC324C2524406B00F780F1 /* Build configuration list for PBXProject "Emomo" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CDFC32482524406B00F780F1;
+			productRefGroup = CDFC32522524406B00F780F1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CDFC32502524406B00F780F1 /* Emomo */,
+				CDFC32662524406D00F780F1 /* EmomoTests */,
+				CDFC32712524406E00F780F1 /* EmomoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CDFC324F2524406B00F780F1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CDFC325C2524406D00F780F1 /* Preview Assets.xcassets in Resources */,
+				CDFC32592524406D00F780F1 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CDFC32652524406D00F780F1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CDFC32702524406E00F780F1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CDFC324D2524406B00F780F1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CDFC325E2524406D00F780F1 /* Persistence.swift in Sources */,
+				CD194FE32525655900363E08 /* WorkoutDetailView.swift in Sources */,
+				CDFC328C2524418600F780F1 /* WorkoutsView.swift in Sources */,
+				CD4FD03B252446F1001B3952 /* AddWorkoutView.swift in Sources */,
+				CDFC32552524406B00F780F1 /* EmomoApp.swift in Sources */,
+				CD4FD036252446D9001B3952 /* AddWorkoutCellView.swift in Sources */,
+				CDFC32612524406D00F780F1 /* Emomo.xcdatamodeld in Sources */,
+				CD194FEC2525982E00363E08 /* AddExerciseView.swift in Sources */,
+				CD4FD02E2524469F001B3952 /* DisclosurelessNavigationLink.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CDFC32632524406D00F780F1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CDFC326C2524406D00F780F1 /* EmomoTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CDFC326E2524406E00F780F1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CDFC32772524406E00F780F1 /* EmomoUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CDFC32692524406D00F780F1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CDFC32502524406B00F780F1 /* Emomo */;
+			targetProxy = CDFC32682524406D00F780F1 /* PBXContainerItemProxy */;
+		};
+		CDFC32742524406E00F780F1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CDFC32502524406B00F780F1 /* Emomo */;
+			targetProxy = CDFC32732524406E00F780F1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		CDFC32792524406E00F780F1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CDFC327A2524406E00F780F1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CDFC327C2524406E00F780F1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"Emomo/Preview Content\"";
+				DEVELOPMENT_TEAM = C436KHVHT4;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = Emomo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = org.rwblickhan.Emomo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CDFC327D2524406E00F780F1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"Emomo/Preview Content\"";
+				DEVELOPMENT_TEAM = C436KHVHT4;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = Emomo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = org.rwblickhan.Emomo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		CDFC327F2524406E00F780F1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = C436KHVHT4;
+				INFOPLIST_FILE = EmomoTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = org.rwblickhan.EmomoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Emomo.app/Emomo";
+			};
+			name = Debug;
+		};
+		CDFC32802524406E00F780F1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = C436KHVHT4;
+				INFOPLIST_FILE = EmomoTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = org.rwblickhan.EmomoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Emomo.app/Emomo";
+			};
+			name = Release;
+		};
+		CDFC32822524406E00F780F1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = C436KHVHT4;
+				INFOPLIST_FILE = EmomoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = org.rwblickhan.EmomoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Emomo;
+			};
+			name = Debug;
+		};
+		CDFC32832524406E00F780F1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = C436KHVHT4;
+				INFOPLIST_FILE = EmomoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = org.rwblickhan.EmomoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Emomo;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CDFC324C2524406B00F780F1 /* Build configuration list for PBXProject "Emomo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CDFC32792524406E00F780F1 /* Debug */,
+				CDFC327A2524406E00F780F1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CDFC327B2524406E00F780F1 /* Build configuration list for PBXNativeTarget "Emomo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CDFC327C2524406E00F780F1 /* Debug */,
+				CDFC327D2524406E00F780F1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CDFC327E2524406E00F780F1 /* Build configuration list for PBXNativeTarget "EmomoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CDFC327F2524406E00F780F1 /* Debug */,
+				CDFC32802524406E00F780F1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CDFC32812524406E00F780F1 /* Build configuration list for PBXNativeTarget "EmomoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CDFC32822524406E00F780F1 /* Debug */,
+				CDFC32832524406E00F780F1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		CDFC325F2524406D00F780F1 /* Emomo.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				CDFC32602524406D00F780F1 /* Emomo.xcdatamodel */,
+			);
+			currentVersion = CDFC32602524406D00F780F1 /* Emomo.xcdatamodel */;
+			path = Emomo.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = CDFC32492524406B00F780F1 /* Project object */;
+}
