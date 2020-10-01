@@ -10,11 +10,11 @@ import SwiftUI
 struct AddWorkoutView: View {
     @Environment(\.managedObjectContext) private var viewContext
     @Environment(\.presentationMode) private var presentationMode
-    
+
     @State private var workoutName: String = ""
     @State private var numSets: Int32 = 1
     @State private var exercises: [AddExerciseData] = []
-    
+
     var body: some View {
         VStack {
             titleTextField.padding()
@@ -22,7 +22,7 @@ struct AddWorkoutView: View {
                 ForEach(exercises.indices, id: \.self) {
                     AddExerciseView(data: $exercises[$0])
                 }
-                // TODO this goes crashy crashy :(
+                // TODO: this goes crashy crashy :(
 //                .onDelete {
 //                    exercises.remove(atOffsets: $0)
 //                }
@@ -34,14 +34,14 @@ struct AddWorkoutView: View {
         .navigationBarTitle(NSLocalizedString("Add workout", comment: "Title of the add workout page"))
         .navigationBarItems(trailing: EditButton())
     }
-    
+
     private var titleTextField: some View {
         TextField(
             NSLocalizedString("Name your workout", comment: "Placeholder text for the workout name text field"),
             text: $workoutName)
             .textFieldStyle(RoundedBorderTextFieldStyle())
     }
-    
+
     private var addExerciseButton: some View {
         Button(NSLocalizedString("Add exercise", comment: "Label of button to add an exercise to a new workout")) {
             withAnimation {
@@ -49,7 +49,7 @@ struct AddWorkoutView: View {
             }
         }
     }
-    
+
     private var numSetsStepper: some View {
         Stepper(
             String.localizedStringWithFormat(
@@ -58,9 +58,9 @@ struct AddWorkoutView: View {
                     comment: "Label of the stepper to set the number of sets in a workout. $1 is the number of sets"),
                 numSets),
             value: $numSets,
-            in: 1...Int32.max)
+            in: 1 ... Int32.max)
     }
-    
+
     private var saveButton: some View {
         Button(NSLocalizedString("Save", comment: "Label of button to finish adding a workout")) {
             withAnimation {
@@ -70,7 +70,7 @@ struct AddWorkoutView: View {
         }
         .disabled(workoutName.isEmpty || exercises.isEmpty)
     }
-    
+
     private func addWorkout() {
         let newWorkout = Workout(context: viewContext)
         newWorkout.name = workoutName
@@ -82,7 +82,7 @@ struct AddWorkoutView: View {
             exercise.numSeconds = data.numSeconds
             return exercise
         })
-        
+
         do {
             try viewContext.save()
         } catch {

@@ -19,12 +19,12 @@ struct AddWorkoutView: View {
             "Finish!",
             comment: "Label of button to finish editing a workout")
     }
-    
+
     @Environment(\.managedObjectContext) private var viewContext
     @Environment(\.presentationMode) private var presentationMode
-    
+
     @State private var workoutName: String = ""
-    
+
     var body: some View {
         TextField(Constants.workoutNamePlaceholderText, text: $workoutName)
             .textFieldStyle(RoundedBorderTextFieldStyle())
@@ -42,7 +42,7 @@ struct AddWorkoutView: View {
                     let nsError = error as NSError
                     fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
                 }
-                
+
                 presentationMode.wrappedValue.dismiss()
             }
         }

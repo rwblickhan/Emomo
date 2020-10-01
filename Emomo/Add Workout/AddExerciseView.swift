@@ -15,7 +15,7 @@ struct AddExerciseData {
 
 struct AddExerciseView: View {
     @Binding var data: AddExerciseData
-    
+
     var body: some View {
         HStack {
             TextField(
