@@ -13,7 +13,7 @@ struct AddWorkoutView: View {
 
     @State private var workoutName: String = ""
     @State private var numSets: Int32 = 1
-    @State private var exercises: [AddExerciseData] = []
+    @State private var exercises = [AddExerciseData(name: "", numReps: 0, numSeconds: 0)]
 
     var body: some View {
         VStack {
@@ -22,7 +22,8 @@ struct AddWorkoutView: View {
                 ForEach(exercises.indices, id: \.self) {
                     AddExerciseView(data: $exercises[$0])
                 }
-                // TODO: this goes crashy crashy :(
+                // TODO: https://github.com/rwblickhan/Emomo/issues/1
+                // This goes crashy crashy :(
 //                .onDelete {
 //                    exercises.remove(atOffsets: $0)
 //                }
