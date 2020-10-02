@@ -17,19 +17,47 @@ struct AddExerciseView: View {
     @Binding var data: AddExerciseData
 
     var body: some View {
-        HStack {
-            TextField(
-                NSLocalizedString("push-ups", comment: "Placeholder text for the exercise name field"),
-                text: $data.name)
-                .textFieldStyle(RoundedBorderTextFieldStyle())
-                .padding()
+        VStack {
+            HStack {
+                numSecondsTextField.padding(.horizontal)
+                Text(NSLocalizedString("seconds of", comment: "Interior label for add exercise view"))
+                        .padding(.horizontal)
+            }
+            HStack {
+                numRepsTextField.padding(.horizontal)
+                nameTextField.padding(.horizontal)
+            }
         }
+    }
+    
+    private var numSecondsTextField: some View {
+        TextField(
+            "",
+            value: $data.numSeconds,
+            formatter: NumberFormatter())
+            .textFieldStyle(RoundedBorderTextFieldStyle())
+            .keyboardType(.numberPad)
+    }
+    
+    private var numRepsTextField: some View {
+        TextField(
+            "",
+            value: $data.numReps,
+            formatter: NumberFormatter())
+            .textFieldStyle(RoundedBorderTextFieldStyle())
+            .keyboardType(.numberPad)
+    }
+    
+    private var nameTextField: some View {
+        TextField(
+            NSLocalizedString("push-ups", comment: "Placeholder text for the exercise name field"),
+            text: $data.name)
+            .textFieldStyle(RoundedBorderTextFieldStyle())
     }
 }
 
 struct AddExerciseView_Previews: PreviewProvider {
     static var previews: some View {
-        EmptyView()
         AddExerciseView(data: .constant(AddExerciseData(name: "Test Exercise", numReps: 10, numSeconds: 60)))
     }
 }

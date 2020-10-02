@@ -13,7 +13,7 @@ struct AddWorkoutView: View {
 
     @State private var workoutName: String = ""
     @State private var numSets: Int32 = 1
-    @State private var exercises: [AddExerciseData] = []
+    @State private var exercises = [AddExerciseData(name: "", numReps: 0, numSeconds: 0)]
 
     var body: some View {
         VStack {
