@@ -22,7 +22,8 @@ struct AddWorkoutView: View {
                 ForEach(exercises.indices, id: \.self) {
                     AddExerciseView(data: $exercises[$0])
                 }
-                // TODO: this goes crashy crashy :(
+                // TODO: https://github.com/rwblickhan/Emomo/issues/1
+                // This goes crashy crashy :(
 //                .onDelete {
 //                    exercises.remove(atOffsets: $0)
 //                }
