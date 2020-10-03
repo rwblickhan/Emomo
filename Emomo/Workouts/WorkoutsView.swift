@@ -36,7 +36,7 @@ struct WorkoutsView: View {
     }
 
     private var addWorkoutButton: some View {
-        DisclosurelessNavigationLink(destination: AddWorkoutView()) {
+        DisclosurelessNavigationLink(destination: AddOrEditWorkoutView(state: .add)) {
             AddWorkoutCellView()
         }
     }

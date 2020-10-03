@@ -11,6 +11,19 @@ struct AddExerciseData {
     var name: String
     var numReps: Int32
     var numSeconds: Int32
+    
+    init(name: String, numReps: Int32, numSeconds: Int32) {
+        self.name = name
+        self.numReps = numReps
+        self.numSeconds = numSeconds
+    }
+    
+    init(exercise: Exercise) {
+        self.init(
+        name: exercise.name ?? "",
+        numReps: exercise.numReps,
+        numSeconds: exercise.numSeconds)
+    }
 }
 
 struct AddExerciseView: View {
