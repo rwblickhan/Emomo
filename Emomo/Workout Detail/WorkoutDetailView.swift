@@ -8,11 +8,7 @@
 import SwiftUI
 
 struct WorkoutDetailView: View {
-    private let workout: Workout
-
-    init(workout: Workout) {
-        self.workout = workout
-    }
+    @State var workout: Workout
 
     var body: some View {
         Text(workout.name ?? "")
