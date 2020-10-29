@@ -47,6 +47,7 @@ struct AddExerciseView: View {
         TextField(
             "",
             value: $data.numSeconds,
+            // TODO https://github.com/rwblickhan/Emomo/issues/7
             formatter: NumberFormatter())
             .textFieldStyle(RoundedBorderTextFieldStyle())
             .keyboardType(.numberPad)
@@ -56,6 +57,7 @@ struct AddExerciseView: View {
         TextField(
             "",
             value: $data.numReps,
+            // TODO https://github.com/rwblickhan/Emomo/issues/7
             formatter: NumberFormatter())
             .textFieldStyle(RoundedBorderTextFieldStyle())
             .keyboardType(.numberPad)
@@ -66,6 +68,7 @@ struct AddExerciseView: View {
             NSLocalizedString("push-ups", comment: "Placeholder text for the exercise name field"),
             text: $data.name)
             .textFieldStyle(RoundedBorderTextFieldStyle())
+            .autocapitalization(.none)
     }
 }
 
