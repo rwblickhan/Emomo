@@ -21,6 +21,9 @@ struct WorkoutDetailView: View {
                 Text("\(exercise.numSeconds) seconds")
             }
         }
+        .navigationBarItems(trailing: NavigationLink(
+                                NSLocalizedString("Edit", comment: "Title of the edit button in workout details"),
+                                destination: AddOrEditWorkoutView(state: .edit(workout))))
     }
 }
 
