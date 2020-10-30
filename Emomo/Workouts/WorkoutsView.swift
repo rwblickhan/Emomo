@@ -25,7 +25,7 @@ struct WorkoutsView: View {
     private var workoutList: some View {
         List {
             ForEach(workouts) { workout in
-                NavigationLink(destination: WorkoutDetailView(workout: workout)) {
+                NavigationLink(destination: WorkoutDetailView(workoutID: workout.id)) {
                     Text("\(workout.name ?? "")")
                 }
             }

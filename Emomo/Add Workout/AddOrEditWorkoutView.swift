@@ -9,7 +9,11 @@ import SwiftUI
 
 enum AddOrEditWorkoutViewState {
     case add
-    case edit(Workout)
+    case edit(
+            workoutID: ObjectIdentifier?,
+            workoutName: String,
+            numSets: Int32,
+            exercises: [Exercise])
 }
 
 struct AddOrEditWorkoutView: View {
@@ -22,12 +26,22 @@ struct AddOrEditWorkoutView: View {
     
     private var state: AddOrEditWorkoutViewState
     
+    private var workoutID: ObjectIdentifier?
+    
+    @FetchRequest(sortDescriptors: [])
+    private var workouts: FetchedResults<Workout>
+    
+    private var workout: Workout? {
+        workouts.first(where: { $0.id == workoutID })
+    }
+    
     init(state: AddOrEditWorkoutViewState) {
         self.state = state
-        if case .edit(let workout) = state {
-            workoutName = workout.name ?? ""
-            numSets = workout.numSets
-            exercises = (workout.exercises?.sortedArray(using: []) as? [Exercise])?.compactMap { AddExerciseData(exercise: $0) } ?? []
+        if case .edit(let workoutID, let workoutName, let numSets, let exercises) = state {
+            self.workoutID = workoutID
+            self.workoutName = workoutName
+            self.numSets = numSets
+            self.exercises = exercises.compactMap { AddExerciseData(exercise: $0) }
         }
     }
 
@@ -111,10 +125,10 @@ struct AddOrEditWorkoutView: View {
                 exercise.numSeconds = data.numSeconds
                 return exercise
             })
-        case .edit(let workout):
-            workout.name = workoutName
-            workout.numSets = numSets
-            workout.exercises = NSSet(array: exercises.map { data in
+        case .edit:
+            workout?.name = workoutName
+            workout?.numSets = numSets
+            workout?.exercises = NSSet(array: exercises.map { data in
                 let exercise = Exercise(context: viewContext)
                 exercise.name = data.name
                 exercise.numReps = data.numReps
