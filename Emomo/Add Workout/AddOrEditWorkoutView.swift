@@ -55,7 +55,10 @@ struct AddOrEditWorkoutView: View {
     private var title: String {
         switch state {
         case .add: return NSLocalizedString("Add workout", comment: "Title of the add workout page")
-        case .edit: return NSLocalizedString("Edit workout", comment: "Title of the edit workout page")
+        case .edit:
+            return String.localizedStringWithFormat(
+                NSLocalizedString("Edit %@", comment: "Title of the edit workout page. $1 is the name of the workout"),
+                workoutName)
         }
     }
 
