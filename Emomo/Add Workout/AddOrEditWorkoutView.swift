@@ -19,17 +19,20 @@ struct AddOrEditWorkoutView: View {
     @State private var workoutName: String = ""
     @State private var numSets: Int32 = 1
     @State private var exercises = [AddExerciseData(name: "", numReps: 0, numSeconds: 0)]
-    
+
     private var state: AddOrEditWorkoutViewState
     private var workout: Workout?
-    
+
     init(state: AddOrEditWorkoutViewState) {
         self.state = state
-        if case .edit(let workout) = state {
+        if case let .edit(workout) = state {
             self.workout = workout
             self._workoutName = .init(initialValue: workout?.name ?? "")
             self._numSets = .init(initialValue: workout?.numSets ?? 0)
-            self._exercises = .init(initialValue: (workout?.exercises?.sortedArray(using: []) as? [Exercise])?.compactMap { AddExerciseData(exercise: $0) } ?? [])
+            self
+                ._exercises = .init(
+                    initialValue: (workout?.exercises?.sortedArray(using: []) as? [Exercise])?
+                        .compactMap { AddExerciseData(exercise: $0) } ?? [])
         }
     }
 
@@ -53,7 +56,7 @@ struct AddOrEditWorkoutView: View {
         .navigationBarTitle(title)
         .navigationBarItems(trailing: EditButton())
     }
-    
+
     private var title: String {
         switch state {
         case .add: return NSLocalizedString("Add workout", comment: "Title of the add workout page")

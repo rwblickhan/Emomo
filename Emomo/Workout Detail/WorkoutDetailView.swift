@@ -9,10 +9,10 @@ import SwiftUI
 
 struct WorkoutDetailView: View {
     var workoutID: ObjectIdentifier
-    
+
     @FetchRequest(sortDescriptors: [])
     private var workouts: FetchedResults<Workout>
-    
+
     private var workout: Workout? {
         workouts.first(where: { $0.id == workoutID })
     }

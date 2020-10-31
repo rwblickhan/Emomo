@@ -11,18 +11,18 @@ struct AddExerciseData {
     var name: String
     var numReps: Int32
     var numSeconds: Int32
-    
+
     init(name: String, numReps: Int32, numSeconds: Int32) {
         self.name = name
         self.numReps = numReps
         self.numSeconds = numSeconds
     }
-    
+
     init(exercise: Exercise) {
         self.init(
-        name: exercise.name ?? "",
-        numReps: exercise.numReps,
-        numSeconds: exercise.numSeconds)
+            name: exercise.name ?? "",
+            numReps: exercise.numReps,
+            numSeconds: exercise.numSeconds)
     }
 }
 
@@ -34,7 +34,7 @@ struct AddExerciseView: View {
             HStack {
                 numSecondsTextField.padding(.horizontal)
                 Text(NSLocalizedString("seconds of", comment: "Interior label for add exercise view"))
-                        .padding(.horizontal)
+                    .padding(.horizontal)
             }
             HStack {
                 numRepsTextField.padding(.horizontal)
@@ -42,27 +42,27 @@ struct AddExerciseView: View {
             }
         }
     }
-    
+
     private var numSecondsTextField: some View {
         TextField(
             "",
             value: $data.numSeconds,
-            // TODO https://github.com/rwblickhan/Emomo/issues/7
+            // TODO: https://github.com/rwblickhan/Emomo/issues/7
             formatter: NumberFormatter())
             .textFieldStyle(RoundedBorderTextFieldStyle())
             .keyboardType(.numberPad)
     }
-    
+
     private var numRepsTextField: some View {
         TextField(
             "",
             value: $data.numReps,
-            // TODO https://github.com/rwblickhan/Emomo/issues/7
+            // TODO: https://github.com/rwblickhan/Emomo/issues/7
             formatter: NumberFormatter())
             .textFieldStyle(RoundedBorderTextFieldStyle())
             .keyboardType(.numberPad)
     }
-    
+
     private var nameTextField: some View {
         TextField(
             NSLocalizedString("push-ups", comment: "Placeholder text for the exercise name field"),
