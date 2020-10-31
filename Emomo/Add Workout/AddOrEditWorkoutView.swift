@@ -9,11 +9,7 @@ import SwiftUI
 
 enum AddOrEditWorkoutViewState {
     case add
-    case edit(
-            workoutID: ObjectIdentifier?,
-            workoutName: String,
-            numSets: Int32,
-            exercises: [Exercise])
+    case edit(Workout?)
 }
 
 struct AddOrEditWorkoutView: View {
@@ -25,23 +21,15 @@ struct AddOrEditWorkoutView: View {
     @State private var exercises = [AddExerciseData(name: "", numReps: 0, numSeconds: 0)]
     
     private var state: AddOrEditWorkoutViewState
-    
-    private var workoutID: ObjectIdentifier?
-    
-    @FetchRequest(sortDescriptors: [])
-    private var workouts: FetchedResults<Workout>
-    
-    private var workout: Workout? {
-        workouts.first(where: { $0.id == workoutID })
-    }
+    private var workout: Workout?
     
     init(state: AddOrEditWorkoutViewState) {
         self.state = state
-        if case .edit(let workoutID, let workoutName, let numSets, let exercises) = state {
-            self.workoutID = workoutID
-            self.workoutName = workoutName
-            self.numSets = numSets
-            self.exercises = exercises.compactMap { AddExerciseData(exercise: $0) }
+        if case .edit(let workout) = state {
+            self.workout = workout
+            self._workoutName = .init(initialValue: workout?.name ?? "")
+            self._numSets = .init(initialValue: workout?.numSets ?? 0)
+            self._exercises = .init(initialValue: (workout?.exercises?.sortedArray(using: []) as? [Exercise])?.compactMap { AddExerciseData(exercise: $0) } ?? [])
         }
     }
 

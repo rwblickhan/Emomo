@@ -30,11 +30,7 @@ struct WorkoutDetailView: View {
         }
         NavigationLink(
             NSLocalizedString("Edit", comment: "Title of the edit button in workout details"),
-            destination: AddOrEditWorkoutView(state: .edit(
-                                                workoutID: workout?.id,
-                                                workoutName: workout?.name ?? "",
-                                                numSets: workout?.numSets ?? 0,
-                                                exercises: (workout?.exercises?.sortedArray(using: []) as? [Exercise]) ?? [])))
+            destination: AddOrEditWorkoutView(state: .edit(workout)))
             .padding()
     }
 }
