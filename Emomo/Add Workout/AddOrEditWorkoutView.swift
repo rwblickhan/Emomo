@@ -31,8 +31,8 @@ struct AddOrEditWorkoutView: View {
             self._numSets = .init(initialValue: workout?.numSets ?? 0)
             self
                 ._exercises = .init(
-                    initialValue: (workout?.exercises?.sortedArray(using: []) as? [Exercise])?
-                        .compactMap { AddExerciseData(exercise: $0) } ?? [])
+                    initialValue: (workout?.exerciseArray ?? [])
+                        .compactMap { AddExerciseData(exercise: $0) })
         }
     }
 

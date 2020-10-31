@@ -22,7 +22,7 @@ struct WorkoutDetailView: View {
         Text("Number of sets: \(workout?.numSets ?? 0)")
             .navigationBarTitle(workout?.name ?? "")
         List {
-            ForEach(workout?.exercises?.sortedArray(using: []) as? [Exercise] ?? []) { exercise in
+            ForEach(workout?.exerciseArray ?? []) { exercise in
                 Text("Exercise \(exercise.name ?? "")")
                 Text("\(exercise.numReps) reps")
                 Text("\(exercise.numSeconds) seconds")

@@ -12,6 +12,7 @@
 		CD4FD02E2524469F001B3952 /* DisclosurelessNavigationLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4FD02D2524469F001B3952 /* DisclosurelessNavigationLink.swift */; };
 		CD4FD036252446D9001B3952 /* AddWorkoutCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4FD035252446D9001B3952 /* AddWorkoutCellView.swift */; };
 		CD4FD03B252446F1001B3952 /* AddOrEditWorkoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4FD03A252446F1001B3952 /* AddOrEditWorkoutView.swift */; };
+		CD860986254DDAE700793D98 /* Workout+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD860985254DDAE700793D98 /* Workout+Utilities.swift */; };
 		CDFC32552524406B00F780F1 /* EmomoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDFC32542524406B00F780F1 /* EmomoApp.swift */; };
 		CDFC32592524406D00F780F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CDFC32582524406D00F780F1 /* Assets.xcassets */; };
 		CDFC325C2524406D00F780F1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CDFC325B2524406D00F780F1 /* Preview Assets.xcassets */; };
@@ -45,6 +46,7 @@
 		CD4FD02D2524469F001B3952 /* DisclosurelessNavigationLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisclosurelessNavigationLink.swift; sourceTree = "<group>"; };
 		CD4FD035252446D9001B3952 /* AddWorkoutCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWorkoutCellView.swift; sourceTree = "<group>"; };
 		CD4FD03A252446F1001B3952 /* AddOrEditWorkoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddOrEditWorkoutView.swift; sourceTree = "<group>"; };
+		CD860985254DDAE700793D98 /* Workout+Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Workout+Utilities.swift"; sourceTree = "<group>"; };
 		CDFC32512524406B00F780F1 /* Emomo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Emomo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDFC32542524406B00F780F1 /* EmomoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmomoApp.swift; sourceTree = "<group>"; };
 		CDFC32582524406D00F780F1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -111,6 +113,14 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
+		CD860984254DDAC900793D98 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				CD860985254DDAE700793D98 /* Workout+Utilities.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
 		CDFC32482524406B00F780F1 = {
 			isa = PBXGroup;
 			children = (
@@ -138,6 +148,7 @@
 				CD194FEA2525981D00363E08 /* Add Workout */,
 				CD194FE12525654A00363E08 /* Workout Detail */,
 				CDFC328A2524417B00F780F1 /* Workouts */,
+				CD860984254DDAC900793D98 /* Utilities */,
 				CDFC32542524406B00F780F1 /* EmomoApp.swift */,
 				CDFC325D2524406D00F780F1 /* Persistence.swift */,
 				CDFC32622524406D00F780F1 /* Info.plist */,
@@ -341,6 +352,7 @@
 				CD4FD036252446D9001B3952 /* AddWorkoutCellView.swift in Sources */,
 				CDFC32612524406D00F780F1 /* Emomo.xcdatamodeld in Sources */,
 				CD194FEC2525982E00363E08 /* AddExerciseView.swift in Sources */,
+				CD860986254DDAE700793D98 /* Workout+Utilities.swift in Sources */,
 				CD4FD02E2524469F001B3952 /* DisclosurelessNavigationLink.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
